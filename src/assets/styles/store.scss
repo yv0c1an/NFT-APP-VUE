@@ -1,0 +1,200 @@
+.store{
+    .main_side{
+        width: 200px;
+    }
+    .main_side_top_l{
+        display: flex;
+        align-items: center;
+    }
+    .main_side_menu{
+        li{
+            &:hover{
+                .main_side_menu_r{
+                    right: 0;
+                }
+            }
+        }
+        .main_side_menu_r{
+            display: flex;
+            width: 50px;
+            position: absolute;
+            right: -50px;
+            justify-content: center;
+            background: #ecf5ff;
+            height: 100%;
+            align-items: center;
+        }
+    }
+    .store_select_num{
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    .store-append {
+        .store-append-icon{
+            padding: 0 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .el-input-group__append{
+            padding: 0;
+        }
+    }
+    .el-dialog__body{
+        padding: 0;
+        border-top: 1px solid #e6effb;
+        display: flex;
+        height: 500px;
+    }
+    .el-dialog__footer{
+        border-top: 1px solid #e6effb;
+    }
+    .main_side_image{
+        border-right: none;
+        border-left: 1px solid #e6effb;
+        padding: 15px;
+        background: #fafbfd;
+        .store_view_img{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            img{
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        .el-form-item--small{
+            margin-bottom: 10px;
+        }
+    }
+    .store_filter{
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .store_con{
+        padding: 15px;
+        flex: 1;
+        .upload--picture-card .el-upload{
+            border: 1px dashed #ddd;
+            border-radius: 5px;
+        }
+        .upload--picture-card .el-upload,.store_main,.store_item{
+            width: 130px;
+            height: 130px;
+            background: #fafbfd;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            float: left;
+        }
+        div:nth-child(4n+4){
+            margin-right: 0;
+        }
+    }
+    .upload_text{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        i{
+            margin: 0;
+        }
+        span{
+            font-size: 12px;
+        }
+    }
+    .store_item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        .store_item_action{
+            position: absolute;
+            height: 30px;
+            width: 100%;
+            bottom: -30px;
+            background: rgba(0,0,0,.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .3s;
+            .iconfont{
+                color: #fff;
+                font-size: 18px;
+                margin: 0 5px;
+            }
+        }
+        &:hover .store_item_action{
+            bottom: 0;
+        }
+        &.allow_select{
+            cursor: pointer;
+        }
+        .store_loading{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0,0,0,.5);
+        }
+        .store_loading_progress{
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        .el-progress{
+            width: 100%;
+        }
+        img{
+            max-height: 100%;
+            max-width: 100%;
+        }
+        .store_select_label{
+            position: absolute;
+            right: -15px;
+            top: -6px;
+            width: 40px;
+            height: 24px;
+            background: var(--el-color-success);
+            text-align: center;
+            transform: rotate(45deg);
+            box-shadow: 0 0 1pc 1px rgb(0 0 0 / 20%);
+            display: none;
+            .iconfont{
+                transform: rotate(-45deg);
+                font-size: 14px;
+                color: #fff;
+                position: absolute;
+                top: 10px;
+                left: 14px;
+                font-weight: bold;
+            }
+        }
+        &.store_select .store_select_label{
+            display: block;
+        }
+    }
+    .store_footer{
+        display: flex;
+        justify-content: space-between;
+        .store_progress_text{
+            font-size: 12px;
+        }
+        .store_progress{
+            width: 200px;
+        }
+        .store_l{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
